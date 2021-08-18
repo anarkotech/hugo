@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Terminal</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Terminal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Aug 2021 15:31:38 +0200</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Github Desktop</title>
+      <link>/posts/appsgui/github-desktop/</link>
+      <pubDate>Wed, 18 Aug 2021 15:31:38 +0200</pubDate>
+      
+      <guid>/posts/appsgui/github-desktop/</guid>
+      <description>Si quieres gestionar tu cuenta de github de manera sencilla mediante una aplicación con interfaz gráfica github-desktop es la aplicación que necesitas.
+INSTALACÓN
+pacman -S github-desktop FUNCIONAMIENTO
+Una vez clonado el repositorio en github-desktop podemos ir creando nuevos archivos dentro de nuestra carpeta enlazada con github. En la pestaña Changes de la aplicación github-desktop deberán aparecer todos los archivos que hemos creado a la vez que podremos previsualizarlos en la ventana de la derecha.</description>
+      <content>&lt;p&gt;Si quieres gestionar tu cuenta de github de manera sencilla mediante una aplicación con interfaz gráfica &lt;strong&gt;github-desktop&lt;/strong&gt; es la aplicación que necesitas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;INSTALACÓN&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pacman -S github-desktop
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;FUNCIONAMIENTO&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Una vez clonado el repositorio en github-desktop podemos ir creando nuevos archivos dentro de nuestra carpeta enlazada con github.
+En la pestaña Changes de la aplicación github-desktop deberán aparecer todos los archivos que hemos creado a la vez que podremos previsualizarlos en la ventana de la derecha.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SUBIR EL ARCHIVO&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;En el text input de abajo a la izquierda podemos agregar un mensaje que describa lo que hicimos con el archivo.
+Luego pulsamos el botón &lt;strong&gt;Commit to master&lt;/strong&gt;
+Luego pulsamos el botón &lt;strong&gt;Publish Branch&lt;/strong&gt; para subir los archivos a la nube.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BAJAR ARCHIVOS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pulsamos el botón &lt;strong&gt;Fetch origin&lt;/strong&gt; para bajarnos todos los archivos desde la nube.&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
