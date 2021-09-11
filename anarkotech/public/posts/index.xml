@@ -6,7 +6,169 @@
     <description>Recent content in Posts on Terminal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Aug 2021 15:31:38 +0200</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Sep 2021 19:30:46 +0200</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>00 Hugo Inicio Rápido</title>
+      <link>/posts/hugo/00_hugo_inicio_rapido/</link>
+      <pubDate>Fri, 10 Sep 2021 19:30:46 +0200</pubDate>
+      
+      <guid>/posts/hugo/00_hugo_inicio_rapido/</guid>
+      <description>Esta guía pretende explicar de manera sencillas los primeros pasos que hay que realizar para poder hacer un sitio web con HUGO.
+Estamos trabajando con un PC con Sistema Operativo Arch Linux y con la consola de comandos. Para el uso de otros Sistemas Operativos algunos de los puntos descritos en este manual pueden no ser válidos.
+1. INSTALAR HUGO Para instalar HUGO en Arch Linux debemos poner el siguiente comando en la consola:</description>
+      <content>&lt;p&gt;Esta guía pretende explicar de manera sencillas los primeros pasos que hay que realizar para poder hacer un sitio web con &lt;strong&gt;HUGO&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Estamos trabajando con un PC con Sistema Operativo &lt;strong&gt;Arch Linux&lt;/strong&gt; y con la consola de comandos. Para el uso de otros Sistemas Operativos algunos de los puntos descritos en este manual pueden no ser válidos.&lt;/p&gt;
+&lt;h2 id=&#34;1-instalar-hugo&#34;&gt;1. INSTALAR HUGO&lt;/h2&gt;
+&lt;p&gt;Para instalar &lt;strong&gt;HUGO&lt;/strong&gt; en Arch Linux debemos poner el siguiente comando en la consola:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo pacman -S hugo
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para verificar que versión tenemos y ver si se ha instalado correctamente  ponemos desde la terinal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-creación-de-un-nuevo-sitio-web&#34;&gt;2. CREACIÓN DE UN NUEVO SITIO WEB&lt;/h2&gt;
+&lt;p&gt;Hugo permite crear toda la estructura de archivos y directorios de tu web en el directorio en el que nos encontremos, usando un solo comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new site &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;Nombre_de_la_web&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto crea un directorio con el nombre de la web y dentro de el toda la estructura de directorios y archivos necesarios para la web.&lt;/p&gt;
+&lt;h2 id=&#34;21-estructura-de-directorios&#34;&gt;2.1 ESTRUCTURA DE DIRECTORIOS&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;archetypes/		--&amp;gt;	definir datos sobre el contenido
+content/		--&amp;gt;	aquí se guarda el contenido de la web
+data/			--&amp;gt;	para los datos de la web
+layouts/		--&amp;gt;
+static/			--&amp;gt;	archivos estáticos generados para subir al servidor
+themes/			--&amp;gt;	temas de la web
+config.toml		--&amp;gt;	archivo de configuración de la web
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;3-agregar-un-tema-a-la-web&#34;&gt;3. AGREGAR UN TEMA A LA WEB&lt;/h2&gt;
+&lt;p&gt;En nuestro caso vamos a trabajar con el tema &lt;strong&gt;Terminal&lt;/strong&gt;. Pero podemos elegir cualquiera de los temas que hay en la web:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://themes.gohugo.io/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nuestro tema &lt;strong&gt;Terminal&lt;/strong&gt; tiene el siguiente enlace:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://themes.gohugo.io/themes/hugo-theme-terminal/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Para la instalación del tema tenemos dos opciones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clonarlo directamente desde git a nuestro directorio de Hugo, debemos estar en el directorio raíz de nuestra web:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git clone https://github.com/panr/hugo-theme-terminal.git themes/terminal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;También podemos incluirlo como un submódulo de git para permitir actualizaciones cundo estén disponibles:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;git submodule add https://github.com/panr/hugo-theme-terminal.git themes/terminal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Con esto creamos un directorio &lt;strong&gt;terminal&lt;/strong&gt; dentro del directorio &lt;code&gt;./themes/&lt;/code&gt; de la raíz de nuestra web . Este directorio contiene todas las carpetas y archivos necesarios para que funcione nuestro tema.&lt;/p&gt;
+&lt;h2 id=&#34;4-configuración-del-tema-terminal&#34;&gt;4. CONFIGURACIÓN DEL TEMA &amp;ldquo;TERMINAL&amp;rdquo;&lt;/h2&gt;
+&lt;p&gt;Para configurar el tema &lt;strong&gt;terminal&lt;/strong&gt; solo debemos copiar el siguiente código en el archivo &lt;strong&gt;config.toml&lt;/strong&gt; del directorio raiz de nuestra web y cambiar cualquier parámetro que queramos.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;baseurl &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;
+languageCode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en-us&amp;#34;&lt;/span&gt;
+theme &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;terminal&amp;#34;&lt;/span&gt;
+paginate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;params&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# dir name of your main content (default is `content/posts`).&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# the list of set content will show up on your index page (baseurl).&lt;/span&gt;
+  contentTypeName &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;posts&amp;#34;&lt;/span&gt;
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# [&amp;#34;orange&amp;#34;, &amp;#34;blue&amp;#34;, &amp;#34;red&amp;#34;, &amp;#34;green&amp;#34;, &amp;#34;pink&amp;#34;]&lt;/span&gt;
+  themeColor &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;orange&amp;#34;&lt;/span&gt;
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# if you set this to 0, only submenu trigger will be visible&lt;/span&gt;
+  showMenuItems &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# show selector to switch language&lt;/span&gt;
+  showLanguageSelector &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# set theme to full screen width&lt;/span&gt;
+  fullWidthTheme &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# center theme with default width&lt;/span&gt;
+  centerTheme &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# set a custom favicon (default is a `themeColor` square)&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# favicon = &amp;#34;favicon.ico&amp;#34;&lt;/span&gt;
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# set post to show the last updated&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated&lt;/span&gt;
+  showLastUpdated &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; false
+  &lt;span style=&#34;color:#75715e&#34;&gt;# Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# updatedDatePrefix = &amp;#34;Updated&amp;#34;&lt;/span&gt;
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;# set all headings to their default size (depending on browser settings)&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# it&amp;#39;s set to `true` by default&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# oneHeadingSize = false&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;params.twitter&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# set Twitter handles for Twitter cards&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started#card-and-content-attribution&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;# do not include @&lt;/span&gt;
+  creator &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+  site &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;languages&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;languages.en&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+    languageName &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;English&amp;#34;&lt;/span&gt;
+    title &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Terminal&amp;#34;&lt;/span&gt;
+    subtitle &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A simple, retro theme for Hugo&amp;#34;&lt;/span&gt;
+    owner &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+    keywords &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+    copyright &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+    menuMore &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Show more&amp;#34;&lt;/span&gt;
+    readMore &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read more&amp;#34;&lt;/span&gt;
+    readOtherPosts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Read other posts&amp;#34;&lt;/span&gt;
+    newerPosts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Newer posts&amp;#34;&lt;/span&gt;
+    olderPosts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Older posts&amp;#34;&lt;/span&gt;
+    missingContentMessage &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Page not found...&amp;#34;&lt;/span&gt;
+    missingBackButtonLabel &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Back to home page&amp;#34;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;languages.en.params.logo&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+      logoText &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Terminal&amp;#34;&lt;/span&gt;
+      logoHomeLink &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;languages.en.menu&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;languages.en.menu.main&lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt;
+        identifier &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;about&amp;#34;&lt;/span&gt;
+        name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;About&amp;#34;&lt;/span&gt;
+        url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/about&amp;#34;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;languages.en.menu.main&lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt;
+        identifier &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;showcase&amp;#34;&lt;/span&gt;
+        name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Showcase&amp;#34;&lt;/span&gt;
+        url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/showcase&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;5-añadir-contenido-a-la-web&#34;&gt;5. AÑADIR CONTENIDO A LA WEB&lt;/h2&gt;
+&lt;p&gt;Para Hugo cualquier archivo markdown &amp;ldquo;.md&amp;rdquo; creado en la raíz del directorio &lt;strong&gt;content&lt;/strong&gt; sería una página del sitio o una página global.&lt;/p&gt;
+&lt;p&gt;Si colocamos el siguiente código, estando ubicados en el directorio raiz:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new Nombre_Archivo.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Estamos creando una página global dentro del directorio &lt;strong&gt;content/&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Cada archivo que coloquemos a su vez dentro de &lt;strong&gt;content/&lt;/strong&gt; y dentro de una carpeta, será una página dentro de una colección:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo new coleccion/archivo.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Podemos crear manualmente ficheros de contenido añadiéndolos dentro de la carpeta &lt;strong&gt;content/&lt;/strong&gt; tal que así:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;content/&amp;lt;categoría&amp;gt;/&amp;lt;fichero&amp;gt;.&amp;lt;formato&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Después podemos rellenar manualmente los metadatos del archivo.&lt;/p&gt;
+&lt;p&gt;Si lo que queremos es crear un nuevo post para nuestro blog, el nuevo archivo &lt;strong&gt;.md&lt;/strong&gt; debe estar dentro de la carpeta posts. A su vez puede estar en una subcarpeta que nos permita organizar el post dentro de una categoría:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo new posts/Mi_Post.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;6-metadatos-de-un-archivo-md-con-el-template-terminal&#34;&gt;6. METADATOS DE UN ARCHIVO .md CON EL TEMPLATE &amp;ldquo;TERMINAL&amp;rdquo;&lt;/h2&gt;
+&lt;p&gt;Estos son los metadatos que se crean con el comando &lt;strong&gt;hugo new posts/Mi_post.md&lt;/strong&gt; usando el template &lt;strong&gt;terminal&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title = &amp;quot;Es el título del post&amp;quot;
+date = &amp;quot;2021-09-10T19:30:46+02:00&amp;quot;			#La fecha de creación
+author = &amp;quot;El Autor del post&amp;quot;
+authorTwitter = &amp;quot;Cuenta de twitter&amp;quot; 			#no incluir la  @
+cover = &amp;quot;&amp;quot; 						#agregar un marco al post
+tags = [&amp;quot;Hugo&amp;quot;] 					#Etiquetas para el post
+keywords = [&amp;quot;&amp;quot;, &amp;quot;&amp;quot;]
+description = &amp;quot;Descripción del contenido del post&amp;quot;
+showFullContent = false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;7-iniciar-el-servidor-de-hugo&#34;&gt;7. INICIAR EL SERVIDOR DE HUGO&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo server -t terminal
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Al iniciar, el servidor te indica la dirección que hay que poner en el navegador para previsuaizar la web en la línea:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Web Server is available at //localhost:1313/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Debemos poner &lt;strong&gt;localhost:1313&lt;/strong&gt; en nuestro navegador para ver la web.&lt;/p&gt;
+&lt;h2 id=&#34;8-construir-la-web&#34;&gt;8. CONSTRUIR LA WEB&lt;/h2&gt;
+&lt;p&gt;Para poder subir nuestra web al servidor, debemos construir las páginas en formato estático partiendo de nuestro sitio en formato markdown, para ello en el directorio raíz, usamos el comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;hugo -D
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esto nos genera todo el contenido estático necesario para subir al servidor dentro de la carpeta &lt;code&gt;./public/&lt;/code&gt; por defecto. Podemos poner &lt;code&gt;-d/ --destination&lt;/code&gt; para cambiarlo o seleccionarlos en &lt;code&gt;publishdir&lt;/code&gt; en el config file.&lt;/p&gt;
+</content>
+    </item>
+    
     <item>
       <title>Github Desktop</title>
       <link>/posts/appsgui/github-desktop/</link>

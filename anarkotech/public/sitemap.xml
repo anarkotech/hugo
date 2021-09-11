@@ -2,29 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/posts/hugo/00_hugo_inicio_rapido/</loc>
+    <lastmod>2021-09-10T19:30:46+02:00</lastmod>
+  </url><url>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2021-09-10T19:30:46+02:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2021-09-10T19:30:46+02:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-09-10T19:30:46+02:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-09-10T19:30:46+02:00</lastmod>
+  </url><url>
+    <loc>/prueba/</loc>
+    <lastmod>2021-08-18T17:23:42+02:00</lastmod>
+  </url><url>
     <loc>/tags/apps-gui/</loc>
     <lastmod>2021-08-18T15:31:38+02:00</lastmod>
   </url><url>
     <loc>/posts/appsgui/github-desktop/</loc>
     <lastmod>2021-08-18T15:31:38+02:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2021-08-18T15:31:38+02:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2021-08-18T15:31:38+02:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2021-08-18T15:31:38+02:00</lastmod>
-  </url><url>
     <loc>/about/</loc>
     <lastmod>2021-08-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/hello/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/showcase/</loc>
     <lastmod>2018-07-18T00:00:00+00:00</lastmod>
